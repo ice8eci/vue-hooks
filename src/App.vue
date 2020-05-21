@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <use-throttle-fn></use-throttle-fn>
+    <use-debounce></use-debounce>
     <use-debounce-fn></use-debounce-fn>
     <use-boolean></use-boolean>
     <use-toggle></use-toggle>
@@ -11,6 +13,8 @@ import { ref } from 'vue';
 import UseToggle from './hooks/useToggle/Demo.vue';
 import UseBoolean from './hooks/useBoolean/Demo.vue';
 import UseDebounceFn from './hooks/useDebounceFn/Demo.vue';
+import UseDebounce from './hooks/useDebounce/Demo.vue';
+import UseThrottleFn from './hooks/useThrottleFn/Demo.vue';
 
 export default {
   name: 'App',
@@ -18,6 +22,8 @@ export default {
     UseToggle,
     UseBoolean,
     UseDebounceFn,
+    UseDebounce,
+    UseThrottleFn,
   },
   setup() {
     const count = ref(0);
