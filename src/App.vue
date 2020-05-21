@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-debounce-fn></use-debounce-fn>
     <use-boolean></use-boolean>
     <use-toggle></use-toggle>
   </div>
@@ -9,12 +10,14 @@
 import { ref } from 'vue';
 import UseToggle from './hooks/useToggle/Demo.vue';
 import UseBoolean from './hooks/useBoolean/Demo.vue';
+import UseDebounceFn from './hooks/useDebounceFn/Demo.vue';
 
 export default {
   name: 'App',
   components: {
     UseToggle,
     UseBoolean,
+    UseDebounceFn,
   },
   setup() {
     const count = ref(0);
@@ -39,6 +42,25 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 20px;
+}
+.demo-container {
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 5px 1px #eeeeee;
+}
+input {
+  width: 300px;
+  border: 1px solid #eeeeee;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 5px;
+  box-shadow: none;
+  outline: none;
+  background: #fafafa;
+  border-radius: 4px;
+}
+input:focus {
+  border-color: #2CC7C5;
 }
 </style>

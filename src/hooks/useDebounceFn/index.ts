@@ -6,23 +6,23 @@ type noop = (...args: any[]) => any;
 export interface ReturnValue<T extends any[]> {
   run: (...args: T) => void;
   cancel: () => void;
-};
+}
 
 
 function useDebounceFn<T extends any[]>(
   fn: (...args: T) => any,
   wait: number,
-):ReturnValue<T>;
+): ReturnValue<T>;
 function useDebounceFn<T extends any[]>(
   fn: (...args: T) => any,
   deps: any[],
   waith: number,
-):ReturnValue<T>;
+): ReturnValue<T>;
 function useDebounceFn<T extends any[]>(
   fn: (...args: T) => any,
   deps: any[] | number,
   wait?: number,
-):ReturnValue<T> {
+): ReturnValue<T> {
   const _deps = Array.isArray(deps) ? deps : [];
   const _wait: number = typeof deps === 'number' ? deps : (wait || 0);
   const timer = ref<any>();
@@ -39,12 +39,12 @@ function useDebounceFn<T extends any[]>(
     timer.value = setTimeout(() => {
       fnRef.value(...args);
     }, _wait);
-  }
+  };
 
   watch([..._deps], () => {
     run();
     return cancel;
-  })
+  });
 
   onUnmounted(() => {
     cancel();
@@ -54,6 +54,6 @@ function useDebounceFn<T extends any[]>(
     run,
     cancel,
   };
-};
+}
 
 export default useDebounceFn;

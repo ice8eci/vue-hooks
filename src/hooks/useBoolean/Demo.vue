@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="demo-container">
     <h2>useBoolean</h2>
     <p>优雅的管理boolean值的hook</p>
     <hr />

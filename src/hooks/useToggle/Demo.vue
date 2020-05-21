@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="demo-container">
     <h2>useToggle</h2>
     <p>用于在两个状态间切换的Hook</p>
     <hr />
