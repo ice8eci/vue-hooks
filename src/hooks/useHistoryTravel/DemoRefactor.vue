@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import { ref } from 'vue';
-import useHistoryTravel from './index';
+import useHistoryTravel from './refactor';
 
 export default {
   name: 'useHistoryTravel',

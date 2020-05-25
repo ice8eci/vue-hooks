@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-history-travel-refactor></use-history-travel-refactor>
     <use-history-travel></use-history-travel>
     <use-previous></use-previous>
     <use-counter></use-counter>
@@ -13,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { reactive } from 'vue';
 import UseToggle from './hooks/useToggle/Demo.vue';
 import UseBoolean from './hooks/useBoolean/Demo.vue';
 import UseDebounceFn from './hooks/useDebounceFn/Demo.vue';
@@ -23,10 +24,12 @@ import UseThrottle from './hooks/useThrottle/Demo.vue';
 import UseCounter from './hooks/useCounter/Demo.vue';
 import UsePrevious from './hooks/usePrevious/Demo.vue';
 import UseHistoryTravel from './hooks/useHistoryTravel/Demo.vue';
+import UseHistoryTravelRefactor from './hooks/useHistoryTravel/DemoRefactor.vue';
 
 export default {
   name: 'App',
   components: {
+    UseHistoryTravelRefactor,
     UseHistoryTravel,
     UsePrevious,
     UseCounter,
@@ -38,17 +41,17 @@ export default {
     UseToggle,
   },
   setup() {
-    const count = ref(0);
-    const increase = () => {
-      count.value += 1;
+    const arr = reactive([1, 2, 3, 4]);
+    const clear = () => {
+      arr.length = 0;
     };
-    const decrease = () => {
-      count.value += 1;
+    const add = () => {
+      arr.push(1);
     };
     return {
-      count,
-      increase,
-      decrease,
+      arr,
+      clear,
+      add,
     };
   },
 };

@@ -36,7 +36,6 @@ function useHistoryTravel<T>(initialValue?: T) {
   };
 
   const go = (step: number) => {
-    console.log(step, typeof step);
     if (typeof step !== 'number' || step === 0) return;
     if (step > 0) {
       _forward(step);
@@ -63,7 +62,7 @@ function useHistoryTravel<T>(initialValue?: T) {
     forwardLength,
     addState: inStack,
     goBackward: () => go(-1),
-    goFoward: () => go(1),
+    goForward: () => go(1),
     go,
   };
 }
