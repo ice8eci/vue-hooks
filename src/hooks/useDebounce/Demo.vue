@@ -6,7 +6,7 @@
       <h3>Demo</h3>
       <div>
         <input v-model="inputValue" type="text" placeholder="请输入..." />
-        <p>DebouncedValue: {{ debouncedValue || "等待..."}}</p>
+        <p>DebouncedValue: {{ debouncedValue || "waiting..."}}</p>
       </div>
     </div>
   </div>

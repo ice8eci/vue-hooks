@@ -7,7 +7,7 @@
     </div>
     <div>
       <input type="text" v-model="inputValue" placeholder="请输入..." />
-      <p>throttledValue: {{ throttledValue || "等待..." }}</p>
+      <p>throttledValue: {{ throttledValue || "waiting..." }}</p>
     </div>
   </div>
 </template>

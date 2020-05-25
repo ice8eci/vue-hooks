@@ -17,8 +17,8 @@
         <p style="margin: '16px 0'">
           <button @click="cancel()">Cancel Debounce</button>
         </p>
-        <p>DebouncedValue: {{ debouncedValue || "等待..." }}</p>
-        <p>WatchValue: {{ watchValue || "等待..." }}</p>
+        <p>DebouncedValue: {{ debouncedValue || "waiting..." }}</p>
+        <p>WatchValue: {{ watchValue || "waiting..." }}</p>
       </div>
     </div>
   </div>

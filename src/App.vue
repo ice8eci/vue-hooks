@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <use-history-travel></use-history-travel>
+    <use-previous></use-previous>
+    <use-counter></use-counter>
     <use-throttle></use-throttle>
     <use-throttle-fn></use-throttle-fn>
     <use-debounce></use-debounce>
@@ -17,16 +20,22 @@ import UseDebounceFn from './hooks/useDebounceFn/Demo.vue';
 import UseDebounce from './hooks/useDebounce/Demo.vue';
 import UseThrottleFn from './hooks/useThrottleFn/Demo.vue';
 import UseThrottle from './hooks/useThrottle/Demo.vue';
+import UseCounter from './hooks/useCounter/Demo.vue';
+import UsePrevious from './hooks/usePrevious/Demo.vue';
+import UseHistoryTravel from './hooks/useHistoryTravel/Demo.vue';
 
 export default {
   name: 'App',
   components: {
-    UseToggle,
-    UseBoolean,
-    UseDebounceFn,
-    UseDebounce,
-    UseThrottleFn,
+    UseHistoryTravel,
+    UsePrevious,
+    UseCounter,
     UseThrottle,
+    UseThrottleFn,
+    UseDebounce,
+    UseDebounceFn,
+    UseBoolean,
+    UseToggle,
   },
   setup() {
     const count = ref(0);
@@ -71,5 +80,58 @@ input {
 }
 input:focus {
   border-color: #2CC7C5;
+}
+button {
+  background: #2CC7C5;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+button:after {
+  content: "";
+  background: #47e1df;
+  display: block;
+  position: absolute;
+  /* padding-top: 300%; */
+  /* padding-left: 350%; */
+  /* margin-left: -20px!important; */
+  /* margin-top: -120%; */
+  width: 100%;
+  height:100%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.8s;
+}
+button:hover,button:focus {
+  background: #27bab8;
+  outline: 0;
+}
+button:active {
+  background: #18adab;
+}
+button:disabled {
+  background: #cccccc;
+}
+button:active:after {
+  /* padding: 0; */
+  /* margin: 0; */
+  width: 0;
+  height: 0;
+  opacity: 1;
+  transition: 0s;
+}
+button+button {
+  margin-left: 10px;
+}
+.margin-top-10 {
+  margin-top: 10px;
 }
 </style>
