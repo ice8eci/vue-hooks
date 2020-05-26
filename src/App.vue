@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-size></use-size>
     <use-scroll></use-scroll>
     <use-mouse></use-mouse>
     <use-hover></use-hover>
@@ -35,10 +36,12 @@ import UseSessionStorageState from './hooks/useSessionStorageState/Demo.vue';
 import UseHover from './hooks/dom/useHover/Demo.vue';
 import UseMouse from './hooks/dom/useMouse/Demo.vue';
 import UseScroll from './hooks/dom/useScroll/Demo.vue';
+import UseSize from './hooks/dom/useSize/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseSize,
     UseScroll,
     UseMouse,
     UseHover,
