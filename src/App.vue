@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-session-storage-state></use-session-storage-state>
     <use-local-storage-state></use-local-storage-state>
     <use-history-travel-refactor></use-history-travel-refactor>
     <use-history-travel></use-history-travel>
@@ -27,10 +28,12 @@ import UsePrevious from './hooks/usePrevious/Demo.vue';
 import UseHistoryTravel from './hooks/useHistoryTravel/Demo.vue';
 import UseHistoryTravelRefactor from './hooks/useHistoryTravel/DemoRefactor.vue';
 import UseLocalStorageState from './hooks/useLocalStorageState/Demo.vue';
+import UseSessionStorageState from './hooks/useSessionStorageState/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseSessionStorageState,
     UseLocalStorageState,
     UseHistoryTravelRefactor,
     UseHistoryTravel,

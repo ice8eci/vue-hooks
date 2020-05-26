@@ -1,19 +1,17 @@
 import useStorageState, { StorageStateResult } from '../useStorageState';
 
-function useLocalStorageState<T = undefined>(
-  key: string,
+function useSessionStorageState<T = undefined> (
+  key: string
 ): StorageStateResult<T>
-
-function useLocalStorageState<T>(
+function useSessionStorageState<T>(
   key: string,
   defaultValue: T | (() => T),
 ): StorageStateResult<T>
-
-function useLocalStorageState<T=undefined>(
+function useSessionStorageState<T>(
   key: string,
   defaultValue?: T | (() => T),
 ): StorageStateResult<T> {
-  return useStorageState(localStorage, key, defaultValue);
+  return useStorageState(sessionStorage, key, defaultValue);
 }
 
-export default useLocalStorageState;
+export default useSessionStorageState;
