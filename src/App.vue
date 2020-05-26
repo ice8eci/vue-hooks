@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-local-storage-state></use-local-storage-state>
     <use-history-travel-refactor></use-history-travel-refactor>
     <use-history-travel></use-history-travel>
     <use-previous></use-previous>
@@ -25,10 +26,12 @@ import UseCounter from './hooks/useCounter/Demo.vue';
 import UsePrevious from './hooks/usePrevious/Demo.vue';
 import UseHistoryTravel from './hooks/useHistoryTravel/Demo.vue';
 import UseHistoryTravelRefactor from './hooks/useHistoryTravel/DemoRefactor.vue';
+import UseLocalStorageState from './hooks/useLocalStorageState/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseLocalStorageState,
     UseHistoryTravelRefactor,
     UseHistoryTravel,
     UsePrevious,
@@ -69,7 +72,7 @@ export default {
   margin-bottom: 20px;
   box-shadow: 0 5px 5px 1px #eeeeee;
 }
-input {
+input[type="text"] {
   width: 300px;
   border: 1px solid #eeeeee;
   height: 30px;
@@ -136,5 +139,17 @@ button+button {
 }
 .margin-top-10 {
   margin-top: 10px;
+}
+.checkbox-group {
+  padding: 5px 0;
+}
+.checkbox-group label {
+  display: inline-block;
+}
+.checkbox-group label+label {
+  margin-left: 12px;
+}
+.checkbox-group label input {
+  margin-left: 8px;
 }
 </style>
