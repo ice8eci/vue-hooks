@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-hover></use-hover>
     <use-session-storage-state></use-session-storage-state>
     <use-local-storage-state></use-local-storage-state>
     <use-history-travel-refactor></use-history-travel-refactor>
@@ -29,10 +30,12 @@ import UseHistoryTravel from './hooks/useHistoryTravel/Demo.vue';
 import UseHistoryTravelRefactor from './hooks/useHistoryTravel/DemoRefactor.vue';
 import UseLocalStorageState from './hooks/useLocalStorageState/Demo.vue';
 import UseSessionStorageState from './hooks/useSessionStorageState/Demo.vue';
+import UseHover from './hooks/dom/useHover/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseHover,
     UseSessionStorageState,
     UseLocalStorageState,
     UseHistoryTravelRefactor,
