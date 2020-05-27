@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-key-press></use-key-press>
     <use-size></use-size>
     <use-scroll></use-scroll>
     <use-mouse></use-mouse>
@@ -37,10 +38,12 @@ import UseHover from './hooks/dom/useHover/Demo.vue';
 import UseMouse from './hooks/dom/useMouse/Demo.vue';
 import UseScroll from './hooks/dom/useScroll/Demo.vue';
 import UseSize from './hooks/dom/useSize/Demo.vue';
+import UseKeyPress from './hooks/dom/useKeyPress/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseKeyPress,
     UseSize,
     UseScroll,
     UseMouse,
@@ -166,5 +169,11 @@ button+button {
 }
 .checkbox-group label input {
   margin-left: 8px;
+}
+.text-indent-2em {
+  text-indent: 2em;
+}
+.red-text {
+  color: #000500;
 }
 </style>
