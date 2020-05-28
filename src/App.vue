@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-click-away></use-click-away>
     <use-key-press></use-key-press>
     <use-size></use-size>
     <use-scroll></use-scroll>
@@ -39,10 +40,12 @@ import UseMouse from './hooks/dom/useMouse/Demo.vue';
 import UseScroll from './hooks/dom/useScroll/Demo.vue';
 import UseSize from './hooks/dom/useSize/Demo.vue';
 import UseKeyPress from './hooks/dom/useKeyPress/Demo.vue';
+import UseClickAway from './hooks/dom/useClickAway/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseClickAway,
     UseKeyPress,
     UseSize,
     UseScroll,
