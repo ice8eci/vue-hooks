@@ -120,7 +120,7 @@ input[type="text"] {
 input:focus {
   border-color: #2CC7C5;
 }
-button {
+/* button {
   background: #2CC7C5;
   color: #ffffff;
   font-size: 14px;
@@ -130,8 +130,8 @@ button {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-}
-button:after {
+} */
+/* button:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -141,10 +141,36 @@ button:after {
   opacity: 1;
   background: rgba(255, 255, 255, .5);
   transition: all 1s;
+} */
+button {
+  background: #2CC7C5;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  box-shadow: 0 0 0 -2px #ffffff, 0 0 0 -1px #2CC7C5;
+  -webkit-box-shadow: 0 0 0 -2px #ffffff, 0 0 0 -1px #2CC7C5;
+  -moz-box-shadow: 0 0 0 -2px #ffffff, 0 0 0 -1px #2CC7C5;
+  -o-box-shadow: 0 0 0 -2px #ffffff, 0 0 0 -1px #2CC7C5;
+  border: none;
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition: box-shadow .3s;
+
 }
 button:hover,button:focus {
   background: #27bab8;
   outline: 0;
+  -webkit-box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #27bab8;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #27bab8;
+  -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+  transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+  -webkit-animation: gelatine 0.5s 1;
+  animation: gelatine 0.5s 1;
 }
 button:active {
   background: #18adab;
@@ -152,12 +178,12 @@ button:active {
 button:disabled {
   background: #cccccc;
 }
-button:hover:after {
+/* button:hover:after {
   height: 100%;
   opacity: 0;
-}
+} */
 button+button {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 .margin-top-10 {
   margin-top: 10px;
@@ -182,5 +208,90 @@ button+button {
 }
 .primary-text {
   color: #38A7A5;
+}
+/**
+ * $keyframes \ gelatine
+ **/
+@keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+@-webkit-keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
 }
 </style>
