@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-in-viewport></use-in-viewport>
     <use-responsive></use-responsive>
     <use-fullscreen></use-fullscreen>
     <use-click-away></use-click-away>
@@ -45,10 +46,12 @@ import UseKeyPress from './hooks/dom/useKeyPress/Demo.vue';
 import UseClickAway from './hooks/dom/useClickAway/Demo.vue';
 import UseFullscreen from './hooks/dom/useFullscreen/Demo.vue';
 import UseResponsive from './hooks/dom/useResponsive/Demo.vue';
+import UseInViewport from './hooks/dom/useInViewport/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseInViewport,
     UseResponsive,
     UseFullscreen,
     UseClickAway,
@@ -183,6 +186,9 @@ button+button {
   text-indent: 2em;
 }
 .red-text {
-  color: #000500;
+  color: #D5051E;
+}
+.primary-text {
+  color: #38A7A5;
 }
 </style>
