@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-responsive></use-responsive>
     <use-fullscreen></use-fullscreen>
     <use-click-away></use-click-away>
     <use-key-press></use-key-press>
@@ -43,10 +44,12 @@ import UseSize from './hooks/dom/useSize/Demo.vue';
 import UseKeyPress from './hooks/dom/useKeyPress/Demo.vue';
 import UseClickAway from './hooks/dom/useClickAway/Demo.vue';
 import UseFullscreen from './hooks/dom/useFullscreen/Demo.vue';
+import UseResponsive from './hooks/dom/useResponsive/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseResponsive,
     UseFullscreen,
     UseClickAway,
     UseKeyPress,
