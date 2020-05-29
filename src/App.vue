@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-event-listener></use-event-listener>
     <use-in-viewport></use-in-viewport>
     <use-responsive></use-responsive>
     <use-fullscreen></use-fullscreen>
@@ -47,10 +48,12 @@ import UseClickAway from './hooks/dom/useClickAway/Demo.vue';
 import UseFullscreen from './hooks/dom/useFullscreen/Demo.vue';
 import UseResponsive from './hooks/dom/useResponsive/Demo.vue';
 import UseInViewport from './hooks/dom/useInViewport/Demo.vue';
+import UseEventListener from './hooks/dom/useEventListener/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseEventListener,
     UseInViewport,
     UseResponsive,
     UseFullscreen,
@@ -130,21 +133,14 @@ button {
 }
 button:after {
   content: "";
-  background: #47e1df;
-  display: block;
   position: absolute;
-  /* padding-top: 300%; */
-  /* padding-left: 350%; */
-  /* margin-left: -20px!important; */
-  /* margin-top: -120%; */
   width: 100%;
-  height:100%;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: all 0.8s;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  background: rgba(255, 255, 255, .5);
+  transition: all 1s;
 }
 button:hover,button:focus {
   background: #27bab8;
@@ -156,13 +152,9 @@ button:active {
 button:disabled {
   background: #cccccc;
 }
-button:active:after {
-  /* padding: 0; */
-  /* margin: 0; */
-  width: 0;
-  height: 0;
-  opacity: 1;
-  transition: 0s;
+button:hover:after {
+  height: 100%;
+  opacity: 0;
 }
 button+button {
   margin-left: 10px;
