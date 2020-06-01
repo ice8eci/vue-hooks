@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <use-text-selection></use-text-selection>
     <use-event-listener></use-event-listener>
     <use-in-viewport></use-in-viewport>
     <use-responsive></use-responsive>
@@ -49,10 +50,12 @@ import UseFullscreen from './hooks/dom/useFullscreen/Demo.vue';
 import UseResponsive from './hooks/dom/useResponsive/Demo.vue';
 import UseInViewport from './hooks/dom/useInViewport/Demo.vue';
 import UseEventListener from './hooks/dom/useEventListener/Demo.vue';
+import UseTextSelection from './hooks/dom/useTextSelection/Demo.vue';
 
 export default {
   name: 'App',
   components: {
+    UseTextSelection,
     UseEventListener,
     UseInViewport,
     UseResponsive,
