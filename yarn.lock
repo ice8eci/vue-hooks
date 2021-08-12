@@ -219,6 +219,11 @@
   dependencies:
     "@babel/types" "^7.8.3"
 
+"@babel/helper-validator-identifier@^7.14.9":
+  version "7.14.9"
+  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.14.9.tgz#6654d171b2024f6d8ee151bf2509699919131d48"
+  integrity sha512-pQYxPY0UP6IHISRitNe8bsijHex4TWZXi2HwKVsjPiltzlhse2znVcm9Ace510VT1kxIHjGJCZZQBX2gJDbo0g==
+
 "@babel/helper-validator-identifier@^7.9.0", "@babel/helper-validator-identifier@^7.9.5":
   version "7.9.5"
   resolved "https://registry.npm.taobao.org/@babel/helper-validator-identifier/download/@babel/helper-validator-identifier-7.9.5.tgz#90977a8e6fbf6b431a7dc31752eee233bf052d80"
@@ -251,6 +256,11 @@
     "@babel/helper-validator-identifier" "^7.9.0"
     chalk "^2.0.0"
     js-tokens "^4.0.0"
+
+"@babel/parser@^7.12.0":
+  version "7.15.3"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.15.3.tgz#3416d9bea748052cfcb63dbcc27368105b1ed862"
+  integrity sha512-O0L6v/HvqbdJawj0iBEfVQMc3/6WP+AeOsovsIgBFyJaG+W2w7eqvZB7puddATmWuARlm1SX7DwxJ/JJUnDpEA==
 
 "@babel/parser@^7.8.6", "@babel/parser@^7.9.6":
   version "7.9.6"
@@ -787,6 +797,14 @@
     globals "^11.1.0"
     lodash "^4.17.13"
 
+"@babel/types@^7.12.0":
+  version "7.15.0"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.15.0.tgz#61af11f2286c4e9c69ca8deb5f4375a73c72dcbd"
+  integrity sha512-OBvfqnllOIdX4ojTHpwZbpvz4j3EWyjkZEdmjH0/cgsd6QOdSgU8rLSk6ard/pcW7rlmjdVSX/AWOaORR1uNOQ==
+  dependencies:
+    "@babel/helper-validator-identifier" "^7.14.9"
+    to-fast-properties "^2.0.0"
+
 "@babel/types@^7.4.4", "@babel/types@^7.8.3", "@babel/types@^7.8.6", "@babel/types@^7.9.0", "@babel/types@^7.9.5", "@babel/types@^7.9.6":
   version "7.9.6"
   resolved "https://registry.npm.taobao.org/@babel/types/download/@babel/types-7.9.6.tgz#2c5502b427251e9de1bd2dff95add646d95cc9f7"
@@ -1241,6 +1259,17 @@
     estree-walker "^0.8.1"
     source-map "^0.6.1"
 
+"@vue/compiler-core@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@vue/compiler-core/-/compiler-core-3.2.2.tgz#8d3e29f129579ed9b14f48af735fd8d95f248504"
+  integrity sha512-QhCI0ZU5nAR0LMcLgzW3v75374tIrHGp8XG5CzJS7Nsy+iuignbE4MZ2XJfh5TGIrtpuzfWA4eTIfukZf/cRdg==
+  dependencies:
+    "@babel/parser" "^7.12.0"
+    "@babel/types" "^7.12.0"
+    "@vue/shared" "3.2.2"
+    estree-walker "^2.0.1"
+    source-map "^0.6.1"
+
 "@vue/compiler-dom@3.0.0-beta.14":
   version "3.0.0-beta.14"
   resolved "https://registry.npm.taobao.org/@vue/compiler-dom/download/@vue/compiler-dom-3.0.0-beta.14.tgz#2ea1c165e06e9630e687a7a5cbde4e8b20b064ac"
@@ -1248,6 +1277,14 @@
   dependencies:
     "@vue/compiler-core" "3.0.0-beta.14"
     "@vue/shared" "3.0.0-beta.14"
+
+"@vue/compiler-dom@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@vue/compiler-dom/-/compiler-dom-3.2.2.tgz#26e198498746c53047c3744d26fc95e670692ab7"
+  integrity sha512-ggcc+NV/ENIE0Uc3TxVE/sKrhYVpLepMAAmEiQ047332mbKOvUkowz4TTFZ+YkgOIuBOPP0XpCxmCMg7p874mA==
+  dependencies:
+    "@vue/compiler-core" "3.2.2"
+    "@vue/shared" "3.2.2"
 
 "@vue/compiler-sfc@^3.0.0-beta.1":
   version "3.0.0-beta.14"
@@ -1313,34 +1350,39 @@
   resolved "https://registry.npm.taobao.org/@vue/preload-webpack-plugin/download/@vue/preload-webpack-plugin-1.1.1.tgz#18723530d304f443021da2292d6ec9502826104a"
   integrity sha1-GHI1MNME9EMCHaIpLW7JUCgmEEo=
 
-"@vue/reactivity@3.0.0-beta.14":
-  version "3.0.0-beta.14"
-  resolved "https://registry.npm.taobao.org/@vue/reactivity/download/@vue/reactivity-3.0.0-beta.14.tgz#a041ec24ce2e545583a6a1a42774311c16870a91"
-  integrity sha1-oEHsJM4uVFWDpqGkJ3QxHBaHCpE=
+"@vue/reactivity@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.2.2.tgz#d37011a68395e038a3cf5256af52d48c591b06b6"
+  integrity sha512-IHjhtmrhK6dzacj/EnLQDWOaA3HuzzVk6w84qgV8EpS4uWGIJXiRalMRg6XvGW2ykJvIl3pLsF0aBFlTMRiLOA==
   dependencies:
-    "@vue/shared" "3.0.0-beta.14"
+    "@vue/shared" "3.2.2"
 
-"@vue/runtime-core@3.0.0-beta.14":
-  version "3.0.0-beta.14"
-  resolved "https://registry.npm.taobao.org/@vue/runtime-core/download/@vue/runtime-core-3.0.0-beta.14.tgz#4f8162befd6ad1ac55cc6c142edc8301b090658a"
-  integrity sha1-T4Fivv1q0axVzGwULtyDAbCQZYo=
+"@vue/runtime-core@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@vue/runtime-core/-/runtime-core-3.2.2.tgz#b9a7250783de19dd8dd6febf008084b0f9144586"
+  integrity sha512-/aUk1+GO/VPX0oVxhbzSWE1zrf3/wGCsO1ALNisVokYftKqfqLDjbJHE6mrI2hx3MiuwbHrWjJClkGUVTIOPEQ==
   dependencies:
-    "@vue/reactivity" "3.0.0-beta.14"
-    "@vue/shared" "3.0.0-beta.14"
+    "@vue/reactivity" "3.2.2"
+    "@vue/shared" "3.2.2"
 
-"@vue/runtime-dom@3.0.0-beta.14":
-  version "3.0.0-beta.14"
-  resolved "https://registry.npm.taobao.org/@vue/runtime-dom/download/@vue/runtime-dom-3.0.0-beta.14.tgz#080e9dd48a95da639f9fcc6d70a2d9620aec6ab8"
-  integrity sha1-CA6d1IqV2mOfn8xtcKLZYgrsarg=
+"@vue/runtime-dom@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@vue/runtime-dom/-/runtime-dom-3.2.2.tgz#6d0da23ed1cfc702477f4b8c5dc4f9335c94e119"
+  integrity sha512-1Le/NpCfawCOfePfJezvWUF+oCVLU8N+IHN4oFDOxRe6/PgHNJ+yT+YdxFifBfI+TIAoXI/9PsnqzmJZV+xsmw==
   dependencies:
-    "@vue/runtime-core" "3.0.0-beta.14"
-    "@vue/shared" "3.0.0-beta.14"
+    "@vue/runtime-core" "3.2.2"
+    "@vue/shared" "3.2.2"
     csstype "^2.6.8"
 
 "@vue/shared@3.0.0-beta.14":
   version "3.0.0-beta.14"
   resolved "https://registry.npm.taobao.org/@vue/shared/download/@vue/shared-3.0.0-beta.14.tgz#886afe5c233a5b255c186142324c40f114958af5"
   integrity sha1-iGr+XCM6WyVcGGFCMkxA8RSVivU=
+
+"@vue/shared@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.2.tgz#6104185ebd57af5a14ac51c1f491b2205fc24054"
+  integrity sha512-dvYb318tk9uOzHtSaT3WII/HscQSIRzoCZ5GyxEb3JlkEXASpAUAQwKnvSe2CudnF8XHFRTB7VITWSnWNLZUtA==
 
 "@vue/web-component-wrapper@^1.2.0":
   version "1.2.0"
@@ -2678,6 +2720,11 @@ core-js@^3.6.4:
   resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.6.5.tgz?cache=0&sync_timestamp=1586450269267&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
   integrity sha1-c5XcJzrzf7LlDpvT2f6EEoUjHRo=
 
+core-js@^3.6.5:
+  version "3.16.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.16.1.tgz#f4485ce5c9f3c6a7cb18fa80488e08d362097249"
+  integrity sha512-AAkP8i35EbefU+JddyWi12AWE9f2N/qr/pwnDtWz4nyUIBGMJPX99ANFFRSw6FefM374lDujdtLDyhN2A/btHw==
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -3615,6 +3662,11 @@ estree-walker@^0.8.1:
   version "0.8.1"
   resolved "https://registry.npm.taobao.org/estree-walker/download/estree-walker-0.8.1.tgz#6230ce2ec9a5cb03888afcaf295f97d90aa52b79"
   integrity sha1-YjDOLsmlywOIivyvKV+X2QqlK3k=
+
+estree-walker@^2.0.1:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
+  integrity sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
 
 esutils@^2.0.2:
   version "2.0.3"
@@ -4706,6 +4758,11 @@ interpret@^1.0.0:
   version "1.2.0"
   resolved "https://registry.npm.taobao.org/interpret/download/interpret-1.2.0.tgz?cache=0&sync_timestamp=1571708682279&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Finterpret%2Fdownload%2Finterpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   integrity sha1-1QYaYiS+WOgIOYX1AU2EQ1lXYpY=
+
+intersection-observer@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.10.0.tgz#4d11d63c1ff67e21e62987be24d55218da1a1a69"
+  integrity sha512-fn4bQ0Xq8FTej09YC/jqKZwtijpvARlRp6wxL5WTA6yPe2YWSJ5RJh7Nm79rK2qB0wr6iDQzH60XGq5V/7u8YQ==
 
 invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
@@ -6260,9 +6317,9 @@ path-key@^3.0.0, path-key@^3.1.0:
   integrity sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=
 
 path-parse@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.npm.taobao.org/path-parse/download/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
-  integrity sha1-1i27VnlAXXLEc37FhgDp3c8G0kw=
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
+  integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
 
 path-to-regexp@0.1.7:
   version "0.1.7"
@@ -7201,6 +7258,11 @@ requires-port@^1.0.0:
   resolved "https://registry.npm.taobao.org/requires-port/download/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
+resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
+
 resolve-cwd@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/resolve-cwd/download/resolve-cwd-2.0.0.tgz#00a9f7387556e27038eae232caa372a6a59b665a"
@@ -7350,6 +7412,11 @@ schema-utils@^2.0.0, schema-utils@^2.5.0, schema-utils@^2.6.5, schema-utils@^2.6
   dependencies:
     ajv "^6.12.0"
     ajv-keywords "^3.4.1"
+
+screenfull@^5.0.2:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-5.1.0.tgz#85c13c70f4ead4c1b8a935c70010dfdcd2c0e5c8"
+  integrity sha512-dYaNuOdzr+kc6J6CFcBrzkLCfyGcMg+gWkJ8us93IQ7y1cevhQAugFsaCdMHb6lw8KV3xPzSxzH7zM1dQap9mA==
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -8573,14 +8640,14 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
-vue@^3.0.0-beta.1:
-  version "3.0.0-beta.14"
-  resolved "https://registry.npm.taobao.org/vue/download/vue-3.0.0-beta.14.tgz?cache=0&sync_timestamp=1589827530067&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-3.0.0-beta.14.tgz#d2c8739e00c4a4a06b519c14c57d204c350c980c"
-  integrity sha1-0shzngDEpKBrUZwUxX0gTDUMmAw=
+vue@^3.0.0-beta.14:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.2.tgz#11715cb71a02baefd0f6e6552dc623680eb1bf32"
+  integrity sha512-D/LuzAV30CgNJYGyNheE/VUs5N4toL2IgmS6c9qeOxvyh0xyn4exyRqizpXIrsvfx34zG9x5gCI2tdRHCGvF9w==
   dependencies:
-    "@vue/compiler-dom" "3.0.0-beta.14"
-    "@vue/runtime-dom" "3.0.0-beta.14"
-    "@vue/shared" "3.0.0-beta.14"
+    "@vue/compiler-dom" "3.2.2"
+    "@vue/runtime-dom" "3.2.2"
+    "@vue/shared" "3.2.2"
 
 watchpack-chokidar2@^2.0.0:
   version "2.0.0"
